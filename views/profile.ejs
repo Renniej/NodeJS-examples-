@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+
+<html>
+
+
+<head>
+    <link href = "/assets/styles.css" rel = "stylesheet" type = "text/css"/>
+
+
+    <body>
+
+        <% include partials/nav.ejs %>
+
+        <h1>Welcome to <%= person %>'s Profile!!!!! </h1>
+
+        <p><strong> Age : <%= data.age%> </strong></p>
+        <p><strong> Job : <%= data.job%> </strong></p>
+
+        <h2>Hobbies</h2>
+        <ul>
+
+            <% data.hobbies.forEach(function(elem){ %>
+            
+            <li><%= elem %></li>
+            
+            
+           <% }); %>
+
+        </ul>
+        <p>Just testing out some template engine stuff</p>
+
+    </body>
+
+
+</head>
+
+</html>
